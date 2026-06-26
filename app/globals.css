@@ -1,26 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Ytor */
+  --bg:            #FAF6F2;
+  --surface:       #FFFFFF;
+  --border:        #ECE6E0;
+  --border-card:   #EFE9E3;
+
+  /* Text */
+  --ink:           #211B2A;
+  --text-2:        #7A7280;
+  --text-3:        #A99CAD;
+
+  /* Brand — periwinkle */
+  --brand:         #6C72FF;
+  --brand-deep:    #5258E8;
+  --brand-tint:    #E8E9FF;
+  --brand-on-tint: #4A50D6;
+
+  /* Semantik */
+  --mint:          #59CFA0;
+  --mint-deep:     #2E9B72;
+  --mint-tint:     #E2F6EE;
+  --mint-text:     #1A6B4C;
+
+  --peach:         #FF9E7A;
+  --peach-deep:    #D9663F;
+  --peach-tint:    #FFEADF;
+
+  --danger:        #DD5238;
+  --danger-tint:   #FCE5DF;
+
+  --lilac:         #CDBFFF;
+  --amber-cat:     #F2A03C;
+
+  /* Radier */
+  --r-sm:  8px;
+  --r:     12px;
+  --r-lg:  16px;
+  --r-xl:  20px;
+  --r-2xl: 28px;
+
+  /* Skuggor */
+  --shadow-xs: 0 1px 2px rgba(33,27,42,.04);
+  --shadow-sm: 0 1px 3px rgba(33,27,42,.06), 0 2px 8px rgba(33,27,42,.04);
+  --shadow:    0 2px 8px rgba(33,27,42,.07), 0 8px 24px rgba(33,27,42,.05);
+  --shadow-lg: 0 8px 24px rgba(33,27,42,.12), 0 24px 48px rgba(33,27,42,.07);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.font-display { font-family: 'Quicksand', sans-serif; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: var(--r-sm);
 }
