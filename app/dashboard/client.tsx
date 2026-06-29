@@ -63,9 +63,10 @@ export function DashboardClient({
           <Logo size={26} />
           <nav style={{ display: 'flex', gap: '4px' }}>
             {[
-              { href: '/dashboard',   label: 'Översikt',     active: true  },
-              { href: '/abonnemang',  label: 'Abonnemang',   active: false },
-              { href: '/login',       label: 'Logga in',     active: false },
+              { href: '/dashboard',     label: 'Översikt',      active: true  },
+              { href: '/abonnemang',    label: 'Abonnemang',    active: false },
+              { href: '/scanner',       label: 'AI-scanner',    active: false },
+              { href: '/installningar', label: 'Inställningar', active: false },
             ].map(item => (
               <Link key={item.label} href={item.href} style={{
                 padding: '6px 14px', borderRadius: 'var(--r-sm)',
